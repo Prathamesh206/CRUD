@@ -51,7 +51,7 @@ public class EmployeeDao {
 
 		try {
 			
-//			connection.setAutoCommit(false);
+			connection.setAutoCommit(false);
 			
 			PreparedStatement insertStatment=connection.prepareStatement(insertquery);
 			insertStatment.setString(FIRSTNAME, employee.getFirstName());
@@ -68,7 +68,7 @@ public class EmployeeDao {
 				return true;
 
 			}
-//			connection.commit();
+			connection.commit();
 
 		}	catch (SQLException sqlException) {
 			try {
@@ -82,7 +82,7 @@ public class EmployeeDao {
 				log.error("message"+sqlException1);
 
 			}
-//			log.error("message" + sqlException);
+			log.error("message" + sqlException);
 			System.out.println("Data not inserted");
 		}finally {
 			if(connection!=null) {
