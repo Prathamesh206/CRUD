@@ -1,4 +1,4 @@
-package in.sts.crudApplication.dao;
+package in.sts.CRUD_Application.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

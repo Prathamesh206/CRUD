@@ -1,5 +1,5 @@
-<%@page import="in.sts.crudApplication.dao.EmployeeDao"%>
-<%@page import="in.sts.crudApplication.entity.Employee"%>
+<%@page import="in.sts.CRUD_Application.dao.EmployeeDao"%>
+<%@page import="in.sts.CRUD_Application.entity.Employee"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>

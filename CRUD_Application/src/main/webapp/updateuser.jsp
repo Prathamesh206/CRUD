@@ -1,6 +1,6 @@
 <%@page import="java.util.ArrayList"%>
-<%@page import="in.sts.crudpplication.support.selectList"%>
-<%@page import="in.sts.crudApplication.entity.Employee"%>
+<%@page import="in.sts.CRUD_Application.support.selectList"%>
+<%@page import="in.sts.CRUD_Application.entity.Employee"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>

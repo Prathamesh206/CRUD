@@ -1,4 +1,4 @@
-package in.sts.crudApplication.connection;
+package in.sts.CRUD_Application.connection;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

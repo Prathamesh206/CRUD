@@ -1,4 +1,4 @@
-package in.sts.crudApplication.servlet;
+package in.sts.CRUD_Application.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -13,8 +13,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import org.apache.log4j.BasicConfigurator;
-import in.sts.crudApplication.dao.EmployeeDao;
-import in.sts.crudApplication.entity.Employee;
+
+import in.sts.CRUD_Application.dao.EmployeeDao;
+import in.sts.CRUD_Application.entity.Employee;
 
 /**
  * Servlet implementation class RegistrationServlet

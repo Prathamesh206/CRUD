@@ -1,4 +1,4 @@
-package in.sts.crudpplication.support;
+package in.sts.CRUD_Application.support;
 
 import java.util.ArrayList;
 

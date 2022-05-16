@@ -1,4 +1,4 @@
-package in.sts.crudApplication.entity;
+package in.sts.CRUD_Application.entity;
 
 
 import java.util.List;

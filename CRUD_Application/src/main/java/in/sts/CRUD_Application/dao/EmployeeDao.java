@@ -1,4 +1,4 @@
-package in.sts.crudApplication.dao;
+package in.sts.CRUD_Application.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -9,9 +9,8 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
-
-import in.sts.crudApplication.connection.DBConnection;
-import in.sts.crudApplication.entity.Employee;
+import in.sts.CRUD_Application.connection.DBConnection;
+import in.sts.CRUD_Application.entity.Employee;
 
 public class EmployeeDao {
 	final static Logger log=Logger.getLogger(EmployeeDao.class);
