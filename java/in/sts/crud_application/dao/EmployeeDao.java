@@ -54,7 +54,7 @@ public class EmployeeDao {
 
 		try {
 			
-//			connection.setAutoCommit(false);
+			connection.setAutoCommit(false);
 			
 			PreparedStatement insertStatment=connection.prepareStatement(insertquery);
 			insertStatment.setString(FIRSTNAME, employee.getFirstName());
@@ -71,7 +71,7 @@ public class EmployeeDao {
 				return true;
 
 			}
-//			connection.commit();
+			connection.commit();
 
 		}	catch (SQLException sqlException) {
 			try {
