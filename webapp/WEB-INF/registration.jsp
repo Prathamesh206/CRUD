@@ -2,8 +2,6 @@
 <%@page import="java.util.ArrayList"%>
 <html>
 <head>
-
-
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.css">
 <script
@@ -32,8 +30,6 @@ h1 {
 
 .mt-100{margin-top: 100px}body{background: #00B4DB;background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);background: linear-gradient(to right, #0083B0, #00B4DB);color: #514B64;min-height: 100vh}
 </style>
-
-
 </head>
 <body>
 	<h1 style="text-align: center;">Signup Form</h1>
@@ -65,10 +61,9 @@ h1 {
 						 multiple>
 						 <%
 						 selectList educationList=new selectList();
-						 				 					ArrayList<String> getList=   educationList.qualificationList();
-						 				 					for(String education:getList){
+					         ArrayList<String> getList=   educationList.qualificationList();
+						 for(String education:getList){
 						 %>
-						 
 							<option value=<%=education %> ><%=education %></option>
 							<<!-- option value="MBA">MBA</option>
 							<option value="BSC-IT">BSC-IT</option>
@@ -83,8 +78,6 @@ h1 {
 						</select>
 					</div>
 				</div>
-
-
 				<div class="col-12">
 					<div class="form-check">
 						<input class="form-check-input" type="checkbox" id="gridCheck"
@@ -96,7 +89,6 @@ h1 {
 					<button type="submit" class="btn btn-primary checked-class" >Sign
 						in</button>
 				</div>
-
 			</form>
 		</div>
 	</div>
