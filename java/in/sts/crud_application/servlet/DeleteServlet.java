@@ -18,14 +18,14 @@ import in.sts.crud_application.dao.EmployeeDao;
 public class DeleteServlet extends HttpServlet {
 	EmployeeDao employeeDao=new EmployeeDao();
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public DeleteServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public DeleteServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -34,7 +34,7 @@ public class DeleteServlet extends HttpServlet {
 		int id=Integer.parseInt(request.getParameter("id"));
 		boolean deleteResult=employeeDao.delete(id);
 		if(deleteResult) {
-			response.sendRedirect("registration");
+			response.sendRedirect("viewServlet");
 		}else {
 			RequestDispatcher req=request.getRequestDispatcher("WEB-INF/error.jsp");
 			req.forward(request, response);

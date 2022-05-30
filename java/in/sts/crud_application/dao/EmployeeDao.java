@@ -71,7 +71,7 @@ public class EmployeeDao {
 				return true;
 
 			}
-//			connection.commit();
+			connection.commit();
 
 		}	catch (SQLException sqlException) {
 			try {

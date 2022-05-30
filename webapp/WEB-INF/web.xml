@@ -4,6 +4,16 @@
 
 <web-app>
 	<!-- <servlet>
+		<servlet-name>ViewServlet</servlet-name>
+		<display-name>ViewServlet</display-name>
+		<description></description>
+		<servlet-class>in.sts.crud_application.servlet.ViewServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ViewServlet</servlet-name>
+		<url-pattern>/ViewServlet</url-pattern>
+	</servlet-mapping>
+	 --><!-- <servlet>
 		<servlet-name>homeServlet</servlet-name>
 		<display-name>homeServlet</display-name>
 		<description></description>

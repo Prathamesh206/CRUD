@@ -60,7 +60,7 @@ body {
 <body>
 	<%
 	
-	Employee employee = (Employee) session.getAttribute("employee");
+	Employee employee = (Employee) request.getAttribute("employee");
 	%>
 	
 

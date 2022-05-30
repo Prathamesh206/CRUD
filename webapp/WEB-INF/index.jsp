@@ -24,7 +24,7 @@ background-size: cover ;
 
 <div class="container" align="center">
 <div class="row">>
-<h1><a href="registration">Click here for view the employees</a></h1>
+<h1><a href="viewServlet">Click here for view the employees</a></h1>
 </div>
 </div>
 

@@ -1,6 +1,7 @@
 package in.sts.crud_application.servlet;
 
 import java.io.IOException;
+import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,17 +12,17 @@ import in.sts.crud_application.dao.EmployeeDao;
 import in.sts.crud_application.entity.Employee;
 
 /**
- * Servlet implementation class EditServlet
+ * Servlet implementation class ViewServlet
  */
-@WebServlet("/edit")
-public class EditServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+@WebServlet("/viewServlet")
+public class ViewServlet extends HttpServlet {
 	EmployeeDao employeeDao=new EmployeeDao();
+	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public EditServlet() {
+	public ViewServlet() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -30,12 +31,16 @@ public class EditServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int id=Integer.parseInt(request.getParameter("id"));
-		Employee employee=employeeDao.getEmployee(id);
+		List<Employee> employeeList=employeeDao.getEmployeeInfo();
+		if(employeeList.size()==0) {
+			RequestDispatcher req=request.getRequestDispatcher("WEB-INF/somethingWentWrong.jsp");
+			req.forward(request, response);
 
-		request.setAttribute("employee", employee);
-		RequestDispatcher req=request.getRequestDispatcher("WEB-INF/updateuser.jsp");
-		req.forward(request, response);
+		}else {
+			request.setAttribute("employeeList", employeeList);
+			RequestDispatcher req=request.getRequestDispatcher("WEB-INF/employeeList.jsp");
+			req.forward(request, response);
+		}
 
 	}
 

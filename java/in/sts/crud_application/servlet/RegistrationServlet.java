@@ -4,21 +4,15 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.List;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import org.apache.log4j.BasicConfigurator;
-
 import in.sts.crud_application.dao.EmployeeDao;
 import in.sts.crud_application.entity.Employee;
-
-
-
 
 
 
@@ -42,19 +36,7 @@ public class RegistrationServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		BasicConfigurator.configure();
-		HttpSession session=request.getSession();
-		List<Employee> employeeList=employeeDao.getEmployeeInfo();
-		if(employeeList.size()==0) {
-			RequestDispatcher req=request.getRequestDispatcher("WEB-INF/somethingWentWrong.jsp");
-			req.forward(request, response);
-			
-		}else {
-			session.setAttribute("employeeList", employeeList);
-			RequestDispatcher req=request.getRequestDispatcher("WEB-INF/employeeList.jsp");
-			req.forward(request, response);
-		}
 	}
-
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -77,8 +59,6 @@ public class RegistrationServlet extends HttpServlet {
 				out.println("<script type='text/javascript'>alert('User Registered Successfully"+response.SC_CREATED+"')</script>");
 				RequestDispatcher req=request.getRequestDispatcher("WEB-INF/index.jsp");
 				req.include(request, response);
-
-				;
 			}else {
 				response.sendRedirect("error.jsp");
 			}
@@ -89,10 +69,6 @@ public class RegistrationServlet extends HttpServlet {
 			out.println("<script type='text/javascript'>alert('User Alerady Present"+response.SC_BAD_REQUEST+"')</script>");
 			RequestDispatcher req=request.getRequestDispatcher("WEB-INF/index.jsp");
 			req.include(request, response);
-
-
-
-
 		}
 	}
 

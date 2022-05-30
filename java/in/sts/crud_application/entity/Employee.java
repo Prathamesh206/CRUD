@@ -10,9 +10,9 @@ public class Employee {
 	private String city;
 	private List<String> educations ;
 	private String job;
-	
+
 	public Employee(int id, String firstName, String lastName, String city, String job) {
-		
+
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -22,10 +22,10 @@ public class Employee {
 
 
 
-	
+
 
 	public Employee() {
-	
+
 		// TODO Auto-generated constructor stub
 	}
 
@@ -69,7 +69,7 @@ public class Employee {
 
 
 
-	
+
 
 	public List<String> getEducations() {
 		return educations;
@@ -99,7 +99,7 @@ public class Employee {
 
 
 	public Employee(int id, String firstName, String lastName, String city, List<String> educations, String job) {
-		
+
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -111,7 +111,7 @@ public class Employee {
 
 
 	public Employee(String firstName, String lastName, String city, String job) {
-		
+
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.city = city;
@@ -129,7 +129,7 @@ public class Employee {
 
 
 	public Employee(String firstName, String lastName, String city, List<String> educations, String job) {
-	
+
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.city = city;
@@ -139,7 +139,7 @@ public class Employee {
 
 
 
-	
+
 
 }
 

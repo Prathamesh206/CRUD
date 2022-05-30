@@ -79,6 +79,7 @@ public class EducationDao {
 	 * getEducations method for fetch on the educationData from the database
 	 */
 
+
 	public List<String>   getEducation(Connection connection,int empId) {
 		String education=null;                      
 
@@ -90,7 +91,6 @@ public class EducationDao {
 			preparedStatement.setInt(EMP_ID, empId);
 			ResultSet educationSet=preparedStatement.executeQuery();
 			while(educationSet.next()) {
-				int id=educationSet.getInt("empid");
 
 				education=	educationSet.getString("education");
 
@@ -104,7 +104,7 @@ public class EducationDao {
 		return educations;
 
 	}
- 	/*
+	/*
 	 * delete method for delete the education from the database and insert the new education in it.
 	 * 
 	 */
@@ -119,7 +119,7 @@ public class EducationDao {
 			int result=deleteStatement.executeUpdate();
 			if(result>0) {
 				insert(empid,newEducations,connection);
-				
+
 			}
 			//				
 		}
@@ -130,7 +130,7 @@ public class EducationDao {
 			log.error("message" +sqlExcpeption);
 		}
 
-	
+
 
 
 	}

@@ -23,14 +23,14 @@ import in.sts.crud_application.entity.Employee;
 public class UpdateServlet extends HttpServlet {
 	EmployeeDao  employeeDao=new EmployeeDao();
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public UpdateServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public UpdateServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -45,30 +45,30 @@ public class UpdateServlet extends HttpServlet {
 	 */
 	@SuppressWarnings("static-access")
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	    
-	   int id=Integer.parseInt(request.getParameter("id"));
-	   String firstName=request.getParameter("firstName");
+
+		int id=Integer.parseInt(request.getParameter("id"));
+		String firstName=request.getParameter("firstName");
 		String lastName=request.getParameter("lastName");
 		String city=request.getParameter("city");
 		String job=request.getParameter("job");
-		
+
 		List<String>educations=Arrays.asList(request.getParameterValues("education"));
-		
+
 
 		Employee employee=new Employee(firstName, lastName, city, job);
 		boolean result = employeeDao.update(id, employee,educations );
-        if(result) {
-        	response.setContentType("text/html");
+		if(result) {
+			response.setContentType("text/html");
 			PrintWriter out = response.getWriter();
 			out.println("<script type='text/javascript'>alert('User Updated Successfully"+response.SC_ACCEPTED+"' )</script>");
 
-			response.sendRedirect("registration");
+			response.sendRedirect("viewServlet");
 
-        	
-        }else {
-        	RequestDispatcher req=request.getRequestDispatcher("WEB-INF/error.jsp");
-        	req.forward(request, response);
-        }
+
+		}else {
+			RequestDispatcher req=request.getRequestDispatcher("WEB-INF/error.jsp");
+			req.forward(request, response);
+		}
 	}
 
 }

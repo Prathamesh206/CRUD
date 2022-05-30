@@ -30,7 +30,7 @@ background-color: rgb(135,206,250);
 <body>
 	<%
 	
-	List<Employee> employeeList = (List<Employee>)session.getAttribute("employeeList");
+	List<Employee> employeeList =(List<Employee>)request.getAttribute("employeeList");
 	int count=1;
 	%>
  <h1 align="center">Employee Details</h1>
