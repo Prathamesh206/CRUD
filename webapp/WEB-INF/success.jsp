@@ -7,9 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form  >
-<label for="name"> Enter your name</label>
-<input type="text" name="name" required="required"> 
-</form>
+<h1 align="center">Success</h1>
 </body>
 </html>
