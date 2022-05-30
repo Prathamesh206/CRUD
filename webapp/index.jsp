@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1 align="center" style="color: red">Error</h1>
+<h1>hii my name is prathamesh</h1>
+<a href="pratham">click </a>
 </body>
 </html>
