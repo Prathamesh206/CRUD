@@ -4,14 +4,12 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.List;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import in.sts.crud_application.dao.EmployeeDao;
 import in.sts.crud_application.entity.Employee;
 
@@ -51,20 +49,14 @@ public class UpdateServlet extends HttpServlet {
 		String lastName=request.getParameter("lastName");
 		String city=request.getParameter("city");
 		String job=request.getParameter("job");
-
 		List<String>educations=Arrays.asList(request.getParameterValues("education"));
-
-
 		Employee employee=new Employee(firstName, lastName, city, job);
 		boolean result = employeeDao.update(id, employee,educations );
 		if(result) {
 			response.setContentType("text/html");
 			PrintWriter out = response.getWriter();
 			out.println("<script type='text/javascript'>alert('User Updated Successfully"+response.SC_ACCEPTED+"' )</script>");
-
 			response.sendRedirect("viewServlet");
-
-
 		}else {
 			RequestDispatcher req=request.getRequestDispatcher("WEB-INF/error.jsp");
 			req.forward(request, response);
