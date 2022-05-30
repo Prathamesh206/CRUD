@@ -17,7 +17,6 @@ import in.sts.crud_application.entity.Employee;
 public class EditServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	EmployeeDao employeeDao=new EmployeeDao();
-
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
@@ -32,11 +31,9 @@ public class EditServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int id=Integer.parseInt(request.getParameter("id"));
 		Employee employee=employeeDao.getEmployee(id);
-
 		request.setAttribute("employee", employee);
 		RequestDispatcher req=request.getRequestDispatcher("WEB-INF/updateuser.jsp");
 		req.forward(request, response);
-
 	}
 
 	/**
