@@ -1,7 +1,5 @@
 package in.sts.crud_application.servlet;
-
 import java.io.IOException;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -39,7 +37,6 @@ public class DeleteServlet extends HttpServlet {
 			RequestDispatcher req=request.getRequestDispatcher("WEB-INF/error.jsp");
 			req.forward(request, response);
 		}
-
 	}
 
 	/**
