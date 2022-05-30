@@ -19,12 +19,10 @@ background-size: cover ;
 <h1 ><a href="home">Click here for Registration</a></h1>
 </div>
 </div>
-
 <div class="container" align="center">
 <div class="row">>
 <h1><a href="viewServlet">Click here for view the employees</a></h1>
 </div>
 </div>
-
 </body>
 </html>
