@@ -95,16 +95,13 @@ body {
 							if (education.equalsIgnoreCase(uiEducation)) {
 							%>
 							<option value=<%=education%> selected="selected"><%=education%></option>
-
 							<%
 							}
 							%>
-
 							<%
 							}
 							%>
 							<option value=<%=uiEducation%>><%=uiEducation%></option>
-
 							<%
 							}
 							%>
