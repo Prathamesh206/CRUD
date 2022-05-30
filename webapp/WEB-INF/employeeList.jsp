@@ -14,30 +14,20 @@
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	crossorigin="anonymous">
-	<style>
-	
+<style>
 body{
-
 background-color: rgb(135,206,250);
-
-
 }
-	
-	
-	
-	</style>
+</style>
 </head>
 <body>
 	<%
-	
 	List<Employee> employeeList =(List<Employee>)request.getAttribute("employeeList");
 	int count=1;
 	%>
  <h1 align="center">Employee Details</h1>
 	<div class="container">
 		<div class="row">
-			
-
 			<table class="table table-striped table-dark">
 				<thead>
 					<tr>
@@ -54,31 +44,23 @@ background-color: rgb(135,206,250);
 					<%
 					for (Employee employee : employeeList) {
 					%>
-		
-			
 					<tr>
 						<th scope="row"><%= count %></th>
 						<td><%= employee.getFirstName() %></td>
 						<td><%= employee.getLastName() %></td>
 						<td><%= employee.getCity() %></td>
-                        <td><%= employee.getJob() %></td>
-                        <td><%= String.join(",", employee.getEducations()) %> </td>
-                        <td><a href="edit?id=<%=employee.getId() %>">edit</a> &nbsp;
-                        <a href="delete?id=<%=employee.getId() %>">delete</a>
-                        </td>
-                        
-						
+                                                <td><%= employee.getJob() %></td>
+                                                <td><%= String.join(",", employee.getEducations()) %> </td>
+                                                <td><a href="edit?id=<%=employee.getId() %>">edit</a> &nbsp;
+                                                 <a href="delete?id=<%=employee.getId() %>">delete</a></td>
 					</tr>
 					<%
 				count++;	}
 					%>
-
-
 				</tbody>
 			</table>
 		</div>
 	</div>
-
                          <h1 align="center"> <a href="<%request.getContextPath();%>/CRUD_Application/">Home</a></h1>
 
 </body>
